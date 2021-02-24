@@ -1,0 +1,7 @@
+body {
+    background: rgb(166, 207, 233);
+}
+
+fieldset {
+    flex-direction: column;
+}

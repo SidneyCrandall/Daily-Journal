@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Journal</title>
+    <link rel="stylesheet" href="styles/journal.css">
+</head>
+
+<!--Text wrapping-->
+
+<!--fieldsets begin-->
+
+<body>
+
+    <header>
+        <!--Logo and Name of page here-->
+        <h1></h1>
+
+    </header>
+
+    <main>
+        <h2>Daily Journal</h2>
+
+        <section>
+            <form action="">
+                <p> 
+                    <fieldset>
+                        <label for="journalDate">Date of entry</label>
+                        <input type="date" name="journalDate" id="journalDate">
+                    </fieldset>
+                </p>
+
+                <p>
+                    <fieldset>    
+                        <label for="topicOfDay">Topic of the Day</label>
+                        <input type="text" name="topicOfDay" id="topicOfDay">   
+                    </fieldset>
+                    
+                </p>
+
+                <p>
+                    <fieldset>
+                        <label for="entry">Journal Entry</label>
+                        <input type="textarea" name="entry" id="entry">
+                    </fieldset>
+                </p>    
+
+                <p>
+                    <fieldset>    
+                        <label for="mood">Mood (Scale Sad to Happy)</label>
+                        <input type="range" name="mood" id="mood" min= "1" max="10">   
+                    </fieldset>
+                </p>
+
+                <p> 
+                    <input type="submit" value="Submit">   
+                </p>
+
+            </form>
+        </section>
+
+   </main> 
+
+   <footer><!--copyright and github tag---></footer>
+
+</body>
+</html>

@@ -3,15 +3,13 @@
  *           HTML representation of the data
  */
 export const JournalEntryComponent = (entry) => {
-    return `
+    return (`
         <section id="entry--${entry.id}" class="journalEntry">
 		<h3 class="Entry Title">${entry.concept}</h3>
-		<ul>
-			<li class="entry-details">Date: ${entry.date}</li>
-			<li class="entry-details">concept: ${entry.concept}</li>
-			<li class="entry-details">Entry: ${entry.entry}</li>
-			<li class="entry-details">Mood ${entry.mood}</li>
-		</ul>
+			<p class="entry-details">Date: ${entry.date}</p>
+			<p class="entry-details">concept: ${entry.concept}</p>
+			<p class="entry-details">Entry: ${entry.entry}</p>
+			<p class="entry-details">Mood ${entry.mood}</p>
 	    </article>
-    `
+    `)
 }

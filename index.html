@@ -14,26 +14,25 @@
 
 <body>
 
-    <header>
+    <header class="header">
         <!--Logo and Name of page here-->
-        <h1></h1>
+        <h1>Deep Thoughts of Web Dev</h1>
 
     </header>
 
-    <main>
-        <h2>Daily Journal</h2>
+    <main class="writeHere">
 
-        <section>
+        <section class="entries">
             <form action="">
                 <p> 
-                    <fieldset>
+                    <fieldset class="fieldset">
                         <label for="journalDate">Date of entry</label>
                         <input type="date" name="journalDate" id="journalDate">
                     </fieldset>
                 </p>
 
                 <p>
-                    <fieldset>    
+                    <fieldset class="fieldset">    
                         <label for="topicOfDay">Topic of the Day</label>
                         <input type="text" name="topicOfDay" id="topicOfDay">   
                     </fieldset>
@@ -41,31 +40,33 @@
                 </p>
 
                 <p>
-                    <fieldset>
-                        <label for="entry">Journal Entry</label>
-                        <input type ="textarea" id="entry">
+                    <fieldset class="fieldset">
+                        <label for="journalEntry">Journal Entry</label>
+                        <textarea id ="journalEntry" name="entry" rows="6" cols="40" class="text"></textarea>
                     </fieldset>
                 </p>    
 
                 <p>
-                    <fieldset>    
-                        <label for="mood">Mood (Scale Sad to Happy)</label>
-                        <input type="range" name="mood" id="mood" min= "1" max="10">   
+                    <fieldset class="fieldset">    
+                        <label for="mood">What are we Feeling Today</label>
+                        <input type="range" name="mood" id="mood" min= "Sad" max="Happy">   
                     </fieldset>
                 </p>
 
                 <p> 
                     <input type="submit" value="Submit">   
                 </p>
-
             </form>
         </section>
+        
+        <section id="entryLog">Entry Log</section>
 
    </main> 
 
-   <footer><!--copyright and github tag---></footer>
-   
-   <script type="module" src="./scripts/main.js>
+<!--copyright and github tag--->
+<footer class="footer">&copy;Sidney Crandll NSS C47</footer>
+
+<script type="module" src="./scripts/main.js"></script>
 
 </body>
 </html>

@@ -1,7 +1,98 @@
 body {
-    background: rgb(166, 207, 233);
+    background: lightgray
 }
 
-fieldset {
-    flex-direction: column;
+.fieldset {
+   display: flex;
+   border: 2px outset darkslategrey;
+}
+
+footer {
+    text-align: center;
+}
+
+.header {
+    text-align: center;
+    color: slateblue
+}
+
+input[type=text]:focus {
+    background-color: lightblue;
+    width: 50%;
+}
+
+textarea {
+    width: 85%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+}
+
+#entryLog {
+      border: black double 10px;
+      text-align: justify;
+}
+
+.logs {
+      text-align: center;
+      text-decoration: darkslategrey;
+}
+
+input[type=submit] {
+    background-color: #73bacf;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=submit]:hover {
+    background-color: #397f81;
+}
+
+input[type=text] textarea {
+    width: 75%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+#topicOfDay{
+
+    width: 45%;
+    margin-top: 6px;
+    float: left;
+}
+
+ label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+.writeHere {
+    border-radius: 5px;
+    padding: 20px;
+}
+
+input[type=text] select {
+    width: 45%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+#journalEntry {
+    text-align: justify;
+}
+
+.entries {
+    box-sizing: border-box;
 }

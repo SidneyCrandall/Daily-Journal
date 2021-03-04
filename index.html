@@ -34,11 +34,25 @@
                 <p>
                     <fieldset class="fieldset">    
                         <label for="topicOfDay">Topic of the Day</label>
-                        <input type="text" name="topicOfDay" id="topicOfDay">   
+                        <input type="text" name="topicOfDay" id="topicOfDay" placeholder="What did you learn">  
                     </fieldset>
                     
                 </p>
 
+                
+                <p>
+                    <fieldset class="fieldset">    
+                        <label for="mood">What are we Feeling Today</label>
+                        <select id="mood" name="mood">
+                            <option value="Content">Content</option>
+                            <option value="Excited">Excited</option>
+                            <option value="Ok">Ok</option>
+                            <option value="Stressed">Stressed</option>
+                            <option value="Anxious">Anxious</option>
+                        </select>   
+                    </fieldset>
+                </p>
+                
                 <p>
                     <fieldset class="fieldset">
                         <label for="journalEntry">Journal Entry</label>
@@ -46,22 +60,19 @@
                     </fieldset>
                 </p>    
 
-                <p>
-                    <fieldset class="fieldset">    
-                        <label for="mood">What are we Feeling Today</label>
-                        <input type="range" name="mood" id="mood" min= "Sad" max="Happy">   
-                    </fieldset>
-                </p>
-
                 <p> 
                     <input type="submit" value="Submit">   
                 </p>
             </form>
         </section>
-        
-        <section id="entryLog">Entry Log</section>
+    </main> 
 
-   </main> 
+    <div class ="Stardate">
+        <h2 class="logs">Stardate 2021</h2>
+        <section id="entryLog"></section>
+    </div>
+
+    <hr>
 
 <!--copyright and github tag--->
 <footer class="footer">&copy;Sidney Crandll NSS C47</footer>

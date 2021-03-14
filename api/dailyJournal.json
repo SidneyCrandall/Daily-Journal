@@ -1,0 +1,52 @@
+{
+    "entries": [{
+            "date": "03/04/2021",
+            "topic": "API",
+            "mood": "Content",
+            "journalEntry": "I seem to be ok with what is happening in class. Which makes me happy, buut anxious. Here's to 5 more months.",
+            "id": "Lsp9lJZ"
+        },
+        {
+            "date": "03/06/2021",
+            "topic": "Saturday is for fun..",
+            "mood": "Excited",
+            "journalEntry": "It was my niece's birthday party. I actually couldn't stop thinking about coding. I keep running over two ideas for my Capstone.",
+            "id": "d_GU4Vy"
+        },
+        {
+            "date": "02/14/2021",
+            "topic": "SNOW DAY",
+            "mood": "Happy",
+            "journalEntry": "Happy Birthday to me, we haev a Snow Day.",
+            "id": "jtKrWc2"
+        },
+        {
+            "date": "02/18/2021",
+            "topic": "GITHUB",
+            "mood": "Stressed",
+            "journalEntry": "We learned about the GitHub Workflow. I feel in over my head.",
+            "id": "zHgyil1"
+        },
+        {
+            "date": "02/24/2021",
+            "topic": "MARTIN'S AQUARIUM",
+            "mood": "OK",
+            "journalEntry": "After working on this, its hard to say where I feel I am. I feel ok about a lot of my work, and sort of proud I'm trying so hard. I just want to succeed at this.",
+            "id": "Qijrhcb"
+        },
+        {
+            "date": "03/01/2021",
+            "topic": "AUTOMATING THE WORLD",
+            "mood": "Anxious",
+            "journalEntry": "Second group project.. I hope this isn't terrifying.",
+            "id": "3ynWaK0"
+        },
+        {
+            "date": "03/08/2021",
+            "topic": "API & JSON",
+            "mood": "Ok",
+            "journalEntry": "I feel like i understand this, but I find it more difficult trying to figure out where to start than anything.",
+            "id": "aJB__6E"
+        }
+    ]
+}

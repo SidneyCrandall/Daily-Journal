@@ -1,5 +1,5 @@
 body {
-    background: lightgray
+    background: rgb(94, 69, 255)
 }
 
 .fieldset {
@@ -95,4 +95,21 @@ input[type=text] select {
 
 .entries {
     box-sizing: border-box;
+}
+
+h1 {
+    display: inline-block;
+    color: #269a9e;
+}
+.iconImage {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2.5px solid #84b9ff;
+
+}
+.navigationBar {
+    height: 60px;
 }

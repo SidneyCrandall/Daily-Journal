@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,28 +16,48 @@
 
     <header class="header">
         <!--Logo and Name of page here-->
-        <h1>Deep Thoughts of Web Dev</h1>
+        <nav class="navigationBar">
+
+            <img class="iconImage" src="images/squidicon.png" alt="squidicon">
+            <h1>Deep Thoughts of Web Dev</h1>
+        </nav>
+        <hr>
 
     </header>
 
     <main class="main">
 
-        <section class="entries"></section>
+        <section class="entries">
 
-        <div class="Stardate">
+        </section>
+        <div class ="Stardate">
             <h2 class="logs">Stardate 2021</h2>
-            <section id="filterLog"></section>
+            <section id = "filterButton">
+                <label for="filteredmoodButton">What are we Feeling Today: </label>
+                <select id ="filteredmoodButton" name ="filteredmoodButton">
+                    <option value = "All"> All the Moods</option>
+                    <option value = "Happy"> Happy</option>
+                    <option value = "Hangry"> Hangry </option>
+                    <option value = "Ok"> Ok</option>
+                    <option value = "Estatic"> Estatic</option>
+                    <option value = "Stressed"> Stressed</option>
+                    <option value = "Anxious"> Anxious</option>
+                    <option value = "Content"> Content</option>
+                    </select>
+                    <label for="dateSelector"> Search by Date:</label>
+                    <input id ="search" type="integer"  name = "dateSelector" id = "dateSelector">
+            </section>
             <section id="entryLog"></section>
+            <section id = "filterLog"> </section>
         </div>
-    </main>
+    </main> 
 
-    <hr>
 
-    <!--copyright and github tag--->
-    <footer class="footer">&copy;Sidney Crandll NSS C47</footer>
 
-    <script type="module" src="./scripts/main.js"></script>
+<!--copyright and github tag--->
+<footer class="footer">&copy;Sidney Crandall NSS C47</footer>
+
+<script type="module" src="./scripts/main.js"></script>
 
 </body>
-
 </html>

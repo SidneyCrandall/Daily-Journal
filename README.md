@@ -10,7 +10,7 @@ A day in the life of a FullStack Web Dev studnet.
 
 ### WIREFRAME
 
-![images](../images/Capture.PNG)
+![](../images/Capture.PNG)
 
 ### USAGE
 A continuing source of growth and practice throughtout my journey as a student at NSS.

@@ -1,24 +1,23 @@
 body {
-    background: rgb(94, 69, 255)
+    background: #A9D1D4;
+    font-family: 'Inconsolata', monospace;
 }
 
 .fieldset {
-   display: flex;
-   border: 2px outset darkslategrey;
+    display: flex;
+    border: 2px outset darkslategrey;
+    width: 50%;
 }
 
 footer {
     text-align: center;
+    background-color: #93B6C7;
+    margin-top: 10px;
 }
 
 .header {
     text-align: center;
-    color: slateblue
-}
-
-input[type=text]:focus {
-    background-color: lightblue;
-    width: 50%;
+    background-color: #718FAD;
 }
 
 textarea {
@@ -33,13 +32,14 @@ textarea {
 }
 
 #entryLog {
-      border: black double 10px;
-      text-align: justify;
+    border: black double 10px;
+    text-align: justify;
+    width: 50%;
 }
 
 .logs {
-      text-align: center;
-      text-decoration: darkslategrey;
+    text-align: center;
+    text-decoration: darkslategrey;
 }
 
 input[type=submit] {
@@ -64,14 +64,13 @@ input[type=text] textarea {
     resize: vertical;
 }
 
-#topicOfDay{
-
+#topicOfDay {
     width: 45%;
     margin-top: 6px;
     float: left;
 }
 
- label {
+label {
     padding: 12px 12px 12px 0;
     display: inline-block;
 }
@@ -99,8 +98,12 @@ input[type=text] select {
 
 h1 {
     display: inline-block;
-    color: #269a9e;
+    color: #43535F;
+    font-family: 'Train One', cursive;
+    font-size: 30px;
+    font-weight: bolder;
 }
+
 .iconImage {
     display: inline-block;
     height: 50px;
@@ -108,8 +111,50 @@ h1 {
     object-fit: cover;
     border-radius: 50%;
     border: 2.5px solid #84b9ff;
-
 }
+
 .navigationBar {
     height: 60px;
+}
+
+button {
+    box-shadow: 0px 10px 14px -7px #276873;
+    background: linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+    background-color: #599bb3;
+    border-radius: 8px;
+    /*display:inline-block;*/
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px 10px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #3d768a;
+}
+
+button:hover {
+    background: linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+    background-color: #408c99;
+}
+
+button:active {
+    position: relative;
+    top: 1px;
+}
+
+input[type=text] {
+    background-color: #D8E2DC;
+    color: white;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #D8E2DC;
+    resize: none;
 }

@@ -1,7 +1,7 @@
-import { entryList } from "./feed/journalEntryList.js"
-import { getEntries,createPost, useEntryCollection } from "./feed/JournalData.js"
-import {journalEntry} from "./feed/journalEntry.js";
-import { PostEntry } from "./feed/journalPost.js";
+import { entryList } from "./feed/JournalEntryList.js"
+import { getEntries, createPost, useEntryCollection, deletePost } from "./feed/JournalData.js"
+import { journalEntry } from "./feed/JournalEntry.js";
+import { PostEntry } from "./feed/JournalPost.js";
 
 
 const applicationElement = document.querySelector("main");
@@ -11,8 +11,8 @@ const applicationElement = document.querySelector("main");
 applicationElement.addEventListener("keypress", event => {
     if (event.target.id === "search") {
         const dateSelected = (event.target.value)
-            console.log(`User wants to view entries authored on: ${dateSelected}`)
-             showdateFilteredPosts(dateSelected);
+        console.log(`User wants to view entries authored on: ${dateSelected}`)
+        showdateFilteredPosts(dateSelected);
     }
 });
 
@@ -20,11 +20,11 @@ const showdateFilteredPosts = (dateSelected) => {
     const filteredbyDate = useEntryCollection().filter(singlePost => {
         if (singlePost.date === dateSelected) {
             return singlePost
-           }
-       })
-       const filterElement = document.querySelector("#entryLog");
-       filterElement.innerHTML = entryList(filteredbyDate);
-   }
+        }
+    })
+    const filterElement = document.querySelector("#entryLog");
+    filterElement.innerHTML = entryList(filteredbyDate);
+}
 
 applicationElement.addEventListener("click", event => {
     event.preventDefault();
@@ -35,7 +35,7 @@ applicationElement.addEventListener("click", event => {
         const journalEntry = document.querySelector("textarea[name='postEntry']").value
         const postObject = {
             topic: topic,
-            date: date, 
+            date: date,
             mood: mood,
             journalEntry: journalEntry,
             userID: 1,
@@ -47,47 +47,57 @@ applicationElement.addEventListener("click", event => {
 applicationElement.addEventListener("change", event => {
     if (event.target.id === "filteredmoodButton") {
         const moodType = (event.target.value)
-            console.log(`User wants to view when the author was feeling ${moodType}`)
-             showFilteredPosts(moodType);
+        console.log(`User wants to view when the author was feeling ${moodType}`)
+        showFilteredPosts(moodType);
     }
-        else if (event.target.id ==="All") {
-            showjournalEntry();
-        }
+    else if (event.target.id === "All") {
+        showjournalEntry();
+    }
 });
 
-const showFilteredPosts = (moodType) => {
-     const filteredData = useEntryCollection().filter(singlePost => {
-         if (singlePost.mood === moodType) {
-             return singlePost
-            }
-        })
-        const filterElement = document.querySelector("#entryLog");
-        filterElement.innerHTML = entryList(filteredData);
+applicationElement.addEventListener("click", event => {
+    event.preventDefault();
+    if (event.target.id.startsWith("delete")) {
+        const entryId = event.target.id.split("__")[1];
+        deletePost(entryId)
+            .then(response => {
+                entryList();
+            })
     }
+})
 
-  
+const showFilteredPosts = (moodType) => {
+    const filteredData = useEntryCollection().filter(singlePost => {
+        if (singlePost.mood === moodType) {
+            return singlePost
+        }
+    })
+    const filterElement = document.querySelector("#entryLog");
+    filterElement.innerHTML = entryList(filteredData);
+}
+
+
 const showjournalEntry = () => {
-       const entryElement = document.querySelector(".entries");
-       //getEntries().then((allPosts) =>{
-           
-       entryElement.innerHTML = PostEntry();
-    }
+    const entryElement = document.querySelector(".entries");
+    //getEntries().then((allPosts) =>{
+    entryElement.innerHTML = PostEntry();
+}
 
 const showPosts = () => {
     const postElement = document.querySelector("#entryLog");
     getEntries().then((allPosts) => {
         postElement.innerHTML = entryList(allPosts);
     })
-} 
+}
 
 
 const startJournal = () => {
     showPosts();
-    showjournalEntry();  
+    showjournalEntry();
     //showfilterEntry();
     showFilteredPosts()
     showdateFilteredPosts();
     //makePost();
-    }
+}
 
 startJournal();

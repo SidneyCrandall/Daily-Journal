@@ -15,15 +15,25 @@ export const getEntries = () => {
 
 export const createPost = postObj => {
     return fetch("http://localhost:8088/entries", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(postObj)
-        })
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(postObj)
+    })
         .then(response => response.json())
 }
 
+export const deletePost = entryId => {
+    return fetch(`http://localhost:8088/entries/${entryId}`, {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json"
+        }
+    })
+        .then(response => response.json())
+        .then(getEntries)
+}
 
 /*
 
@@ -36,14 +46,14 @@ const journal = [
      mood: "Ok"
   },
   {
-      id: 2, 
+      id: 2,
       date: "02/18/2021",
       Topic: "GITHUB",
       entry: "We learned about working through a Github workflow.",
       mood: "Stressed"
   },
   {
-      id: 3, 
+      id: 3,
       date: "02/14/2021",
       Topic: "SNOW DAY",
       entry: "Happy Birthday to me, we have a Snow Day.",
